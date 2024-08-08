@@ -1,0 +1,116 @@
+/* Container for the add item form */
+.add-item {
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgb(140, 140, 140);
+    width: 50vw;
+    max-width: 300px;
+}
+
+/* Common styles for all labels */
+.add-item p {
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Styles for the image upload section */
+.add-image {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.add-image label img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px dashed #cccccc;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.add-image p {
+    margin-top: 10px;
+    color: #888888;
+}
+
+/* Styles for input fields */
+.add-item input[type="text"],
+.add-item input[type="number"],
+.add-item textarea,
+.add-item select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}.add-item select{
+    padding-right: 40px;
+}
+.select-price{
+    display: flex;
+    flex-direction: row;
+}
+/* Textarea specific styles */
+.add-description textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Category selection styles */
+.category-item select {
+    appearance: none;
+}
+
+/* Styles for the submit button */
+.submit-button {
+    text-align: center;
+}
+
+.submit-button button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .add-item {
+        top: 15vh;
+        left: 30vw;
+        width: 70vw; /* Adjusted width for smaller screens */
+    }
+}
+@media (max-width: 600px) {
+    .add-image label img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px dashed #cccccc;
+    padding: 10px;
+    object-fit: cover;
+}
+
+    .add-item {
+        top: 30vh;
+        left: 8vw;
+        width: 70vw; /* Adjusted width for smaller screens */
+    }
+}

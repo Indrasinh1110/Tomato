@@ -1,0 +1,16 @@
+.final-order{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top:10vh;
+    margin-bottom: 10vh;
+    padding: 20px;
+    width: 90vw;
+    height:auto;
+}@media (min-width:600px) {
+.final-order{
+    flex-direction: row;
+}
+}

@@ -1,0 +1,153 @@
+/* Base styling for the sign-in modal */
+.sign-in {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.54);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the sign-in card */
+.sign-in-card {
+    position:relative;
+    width: 400px;
+    padding: 30px;
+    border: 2px solid #ff6347; /* Tomato border */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+    margin: auto;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* General styling for input fields */
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.username:hover,
+.e-mail:hover,
+.password:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+input:focus {
+    border-color: #ff6347; /* Tomato border color on focus */
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Tomato shadow */
+    outline: none;
+}
+
+/* Styling for the checkbox container */
+.terms-and-conditions {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    width: 80%;
+}
+
+.terms-and-conditions input[type="checkbox"] {
+    margin: 3px;
+    width:10px;
+    transform: none;
+}
+
+.terms-and-conditions label {
+    font-family: "Arial", sans-serif;
+    font-size: 15px;
+}
+
+/* Styling for the login/signup change container */
+.login-signup-change,
+.login-or-signup-change {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Styling for the paragraph within the login/signup change container */
+.login-signup-change p,
+.login-or-signup-change p {
+    margin-right: 10px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+}
+
+/* Styling for the button within the login/signup change container */
+.login-signup-change button,
+.login-or-signup-change button {
+    color: #0125c5; /* Tomato color */
+    background-color: white;
+    border: none;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.login-signup-change button:hover,
+.login-or-signup-change button:hover {
+    color: #0e6fac;
+}
+
+.submit {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit:hover {
+    background-color: #bc371f; /* Darker tomato color */
+}
+
+.submit {
+    margin-top: 20px;
+    width: 50%;
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-family: "Arial", sans-serif;
+}
+
+/* Styling for the close button */
+.close-sign-in {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000000; /* Tomato color */
+    transition: color 0.3s ease-in-out;
+}
+
+.close-sign-in:hover {
+    color: #ffa090;
+}

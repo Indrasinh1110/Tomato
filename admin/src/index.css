@@ -1,0 +1,12 @@
+*::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}

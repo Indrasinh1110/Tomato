@@ -1,0 +1,23 @@
+/* NavBar container */
+.navbar-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: #fff; /* White background */
+    border-bottom: 1px solid #ddd; /* Light gray border at the bottom */
+box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo {
+padding: 2vh;
+}
+
+/* Profile image */
+.navbar img {
+    height: 8vh; /* Adjust as necessary */
+    cursor: pointer; /* Indicate interactivity */
+}

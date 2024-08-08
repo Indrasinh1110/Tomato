@@ -1,0 +1,100 @@
+.footer {
+    background-color: #cc330088; /* Dark tomato color */
+    color: white;
+    padding: 20px 0;
+    position:relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-menu-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu-list .menu-item {
+    margin-bottom: 10px;
+}
+
+.footer-menu-list .menu-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-call-to-action-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-call-to-action-description {
+    margin-bottom: 10px;
+}
+
+.footer-call-to-action-button {
+    background-color: white;
+    color: #cc3300;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.footer-call-to-action-button:hover {
+    background-color: #ff6347; /* Light tomato color */
+    color: white;
+}
+
+.footer-call-to-action-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-social-links img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.footer-copyright {
+    background-color: #090909; /* Darker shade of tomato */
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    margin-top: 20px;
+}
+
+.footer-copyright-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-copyright-link:hover {
+    text-decoration: underline;
+}

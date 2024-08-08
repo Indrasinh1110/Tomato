@@ -1,0 +1,125 @@
+/* List.css */
+
+.list-item {
+    top: 20vh;
+    left: 20vw;
+    position: absolute;
+    width: 70vw;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-item th,
+.list-item td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+.list-item th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.list-item td {
+    color: #555;
+}
+
+.list-item tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.list-item tr:hover {
+    background-color: #f1f1f1;
+}
+
+.food-name-admin {
+    width: 10%;
+}
+
+.food-image-admin {
+    width: 10%;
+}
+
+.description-admin {
+    width: 25%;
+}
+
+.category-admin {
+    width: 10%;
+}
+
+.price-admin {
+    width: 10%;
+    text-align: center;
+}
+
+.list-item img {
+    height: 10vh;
+    width: 10vh;
+}
+
+.list-item button {
+    width: 70%;
+    background-color: #f1f1f100;
+    text-decoration: solid;
+}
+
+.remove-item-admin {
+    width: 10%;
+    width: 30;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.food-image-admin img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.list-item button {
+    border: none;
+    width: 3%;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1200px) {
+    .list-item {
+        left: 27vw;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 800px) {
+    .list-item {
+        left: 2vw;
+        width: 90vw;
+        top: 25vh;
+    }
+
+    .food-image-admin {
+        width: 15vw;
+        height: 10vh;
+    }
+
+    .list-item tr th:nth-of-type(2) {
+        width: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .list-item tr td:nth-of-type(3) {
+        display: none;
+    }
+
+    .list-item tr th:nth-of-type(3) {
+        display: none;
+    }
+}

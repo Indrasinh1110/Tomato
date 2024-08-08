@@ -1,0 +1,154 @@
+/* Hero section */
+.hero-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url("./../../assets/header_img.png");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: white;
+    margin: 10px;
+    border-radius: 50px;
+    text-align: left;
+    position: relative;
+    top: 10vh;
+    overflow: hidden;
+}
+
+.hero-content {
+    
+    width: 100%;
+    background: rgba(75, 73, 73, 0.23);
+    border-radius: 10px;
+    animation: hero-slide 0.9s linear 0s 1;
+    position: relative;
+    height: 100%;
+    padding: 50px;
+    padding-top: 100px;
+}
+
+.hero-section h1 {
+    position: relative;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    position: relative;
+    width: 60%;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-section button {
+    position: relative;
+    margin: 10px 0;
+    padding: 15px 30px;
+    background: #9e5d2fb6;
+    color: wheat;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero-section button:hover {
+    background: #9e5d2f;
+    color: white;
+    box-shadow: 5px 5px 0px rgba(214, 144, 144, 0.777);
+}
+
+@keyframes hero-slide {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive breakpoints */
+
+/* Extra small devices (Small phones) */
+@media (max-width: 576px) {
+    .hero-section {
+        height: 40vh;
+       
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        display: none;
+    }
+
+    .hero-section button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Small devices (Phones) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hero-section {
+        height: 50vh;
+        
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+        width: 80%;
+    }
+
+    .hero-section button {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
+
+/* Medium devices (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-section {
+        height: 60vh;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .hero-section button {
+        font-size: 1.1rem;
+        padding: 14px 28px;
+    }
+}
+
+/* Large devices (Desktops) */
+@media (min-width: 992px) {
+    .hero-section {
+        height: 70vh;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1.4rem;
+    }
+
+    .hero-section button {
+        font-size: 1.2rem;
+        padding: 16px 32px;
+    }
+}

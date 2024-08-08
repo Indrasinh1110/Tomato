@@ -1,0 +1,141 @@
+/* CartPlaceOrder.css */
+.cart-place-order {
+    margin-inline: auto;
+    width: 80vw;
+    max-width: 500px;
+    height: auto;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff5f5;
+    border: 1px solid #fb6b52;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.promo-code-box {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.promo-code-box p {
+    margin: 0;
+    font-size: 1em;
+    color: #ff6347;
+    text-align: center;
+}
+
+.promo-code-text {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ff6347;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-promo-code {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.submit-promo-code:hover {
+    background-color: #e5533d;
+}
+
+.place-order-card {
+    width: 80vw;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ff6347;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-order-card h3 {
+    margin-bottom: 20px;
+    color: #ff6347;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.place-order-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.place-order-card li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1em;
+
+    color: #333;
+}
+
+.place-order-card li p {
+    margin: 0;
+}
+
+.total-cart-price {
+    font-weight: 600;
+}
+
+.place-order-card .place-order-submit {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.place-order-card .place-order-submit:hover {
+    background-color: #e5533d;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .cart-place-order {
+        
+        width: 80vw;
+        max-width: 600px;
+        flex-direction: row;
+
+        padding: 30px;
+    }
+
+    .promo-code-text {
+        width: 80%;
+        max-width: 150px;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .place-order-card {
+        margin:20px;
+        width: 85%;
+        max-width:300px;
+    }
+
+    .place-order-card li {
+        font-size: 0.8em;
+    }
+}
