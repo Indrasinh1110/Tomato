@@ -1,6 +1,6 @@
 import { UserModel } from '../models/user.model.js'; // Import your user model
 import jwt from 'jsonwebtoken'; // Import jsonwebtoken for JWT handling
-import bcrypt from 'bcrypt'; // Import bcrypt for password hashing
+import bcrypt from 'bcrypt.js'; // Import bcrypt for password hashing
 import validator from 'validator';
 
 // Generate JWT token
