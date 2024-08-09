@@ -14,7 +14,7 @@ const App = () => {
       <NavBar />
       <SidePanel />
       <Routes>
-        <Route path='/order' element={<Order />} />
+        <Route path='/' element={<Order />} />
         <Route path='/add' element={<Add url={url}/>} />
         <Route path='/list' element={<List url={url}/>} />
 
