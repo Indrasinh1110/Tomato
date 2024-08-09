@@ -14,9 +14,9 @@
 
 /* Styling for the sign-in card */
 .sign-in-card {
-    position:relative;
-    width: 400px;
-    padding: 30px;
+    position: relative;
+    width: 350px;
+    padding: 40px;
     border: 2px solid #ff6347; /* Tomato border */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -27,13 +27,12 @@
     align-items: center;
     font-family: "Arial", sans-serif;
     box-sizing: border-box;
-    margin: auto;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* General styling for input fields */
 input {
-    width: 80%;
+    width: 100%;
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -43,17 +42,48 @@ input {
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.username:hover,
-.e-mail:hover,
-.password:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
 input:focus {
     border-color: #ff6347; /* Tomato border color on focus */
     box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Tomato shadow */
     outline: none;
+}
+
+.username:hover,
+.e-mail:hover,
+.password:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the password field container */
+.password-field {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.password {
+    width: calc(100% - 40px); /* Adjusting width to fit the toggle button */
+}
+
+/* Styling for the toggle password visibility button */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: #ffffff00;
+}
+.toggle-password:hover{
+    background-color: #cccccc88;
+}
+.toggle-password img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Styling for the checkbox container */
@@ -61,12 +91,13 @@ input:focus {
     display: flex;
     margin-top: 10px;
     align-items: center;
-    width: 80%;
+    width: 100%;
 }
 
 .terms-and-conditions input[type="checkbox"] {
     margin: 3px;
-    width:10px;
+    width: 15px;
+    height: 15px;
     transform: none;
 }
 
@@ -94,7 +125,7 @@ input:focus {
 /* Styling for the button within the login/signup change container */
 .login-signup-change button,
 .login-or-signup-change button {
-    color: #0125c5; /* Tomato color */
+    color: #0125c5; /* Blue color */
     background-color: white;
     border: none;
     font-family: "Arial", sans-serif;
@@ -105,7 +136,7 @@ input:focus {
 
 .login-signup-change button:hover,
 .login-or-signup-change button:hover {
-    color: #0e6fac;
+    color: #0e6fac; /* Darker blue on hover */
 }
 
 .submit {
@@ -149,5 +180,6 @@ h3 {
 }
 
 .close-sign-in:hover {
-    color: #ffa090;
+    color: rgb(214, 128, 128); 
+    background-color: #ddd1d188/* Darker tomato color on hover */
 }

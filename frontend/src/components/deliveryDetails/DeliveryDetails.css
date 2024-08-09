@@ -1,61 +1,76 @@
+/* General container styles */
 .form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 700px;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
-    height: auto;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 h2 {
-    color: #d35400; /* Tomato theme color */
     text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Form styles */
 form {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 
 label {
+    margin-bottom: 5px;
+    width: 40%;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
-    font-weight: 500;
-    color: #444;
 }
 
 input {
-    padding: 10px;
-    border: 2px solid #d35400; /* Tomato theme color */
+    width: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 16px;
-    margin-top: 5px;
 }
 
-button {
-    background-color: #d35400; /* Tomato theme color */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #c0392b; /* Darker tomato color for hover effect */
-}
-
+/* Multi-fields layout */
 .multi-fields {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-bottom: 5px;
 }
 
 .multi-fields label {
-    flex: 1;
+    flex: 1 1 100%; /* Allows labels to take full width on smaller screens */
+}
+
+@media (min-width:0px) {
+    .multi-fields label {
+        flex: 1 1 45%; /* Two labels per row on larger screens */
+    }
+}
+
+@media (min-width: 900px) {
+    .multi-fields label {
+        flex: 1 1 30%; /* Three labels per row on very large screens */
+    }
+}
+
+/* Button styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #b73a3a;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color:#fff;
+    border: #b73a3a solid 1px;
+    color: #b73a3a;
 }

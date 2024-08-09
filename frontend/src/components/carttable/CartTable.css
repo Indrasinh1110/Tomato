@@ -1,80 +1,43 @@
-/* CartTable.css */
-
 .cart-table {
-    justify-self: center;
-    width: 90%;
-    border-collapse: collapse;
-    margin: 20px 20px;
-    font-size: 20px;
-    text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  column-gap: 20px;
 }
 
-.cart-table thead tr {
-    background-color: rgba(120, 46, 33, 0.759);
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
+.cart-items {
+  position: relative;
+  width: 50%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cart-items .food-image {
+  display: none;
+}
+.cart-items .food-card {
+  height: fit-content;
 }
 
-.cart-table th, .cart-table td {
-    padding: 10px 12px;
-    border: 1px solid #ddd;
-}
-
-.cart-table tbody td:nth-child(2) {
-    width: 7vw;
-}
-
-.cart-table tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-.cart-table tbody tr img{
-    height: 4vw;
-    width: 4vw;
-}
-
-/* .cart-table tbody tr:hover img{
-    position: absolute;
-    height: 7vw;
-    width: 7vw;
-} */
-
-.cart-table button{
-    width:3vw;
-    height: 2vw;
-    padding-inline:0.5vw;
-    padding-block: 0.5vw;
-}
-.cart-table .cart-item-add {
-    background-color: #4CAF50;
-    color: white;
-}
-.cart-table .cart-item-remove {
-    background-color: #b74b29;
-    color: white;
-}
-
-.cart-table .cart-item-add:hover {
-    background-color:  #4acd4e;
-}
-.cart-table .cart-item-remove:hover {
-    background-color:  #d5491e;
-}
-.cart-table button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.cart-table td button {
+@media (max-width: 900px) {
+  .cart-table {
+    flex-direction: column;
+  }
+  .cart-items {
     width: 100%;
-    box-sizing: border-box;
-}
-
-.cart-table th {
-    text-align: center;
-}
-
-.cart-table td {
-    text-align: center;
+    padding: 0;
+  }
+  .cart-items .food-card {
+    width: 47%;
+    height: 30vh;
+    margin-block: 5px;
+  }
+  .cart-items .food-card .food-item-count {
+    left: 0;
+    bottom: 0%;
+  }
 }

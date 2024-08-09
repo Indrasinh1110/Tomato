@@ -63,7 +63,7 @@ const NavBar = () => {
                     </li>
                 </ul>
                 <div className='navbar-right'>
-                    <img src={assets.search_icon} alt='Search icon' />
+                    <img src={assets.search_icon} alt='Search icon' className='search-bar' />
                     <Link to='/cart' className='navbar-basket-icon'>
                         <img src={assets.basket_icon} alt='Basket icon' />
                         <div className='dot'></div>
@@ -73,12 +73,10 @@ const NavBar = () => {
                             <img src={assets.profile_icon} alt='Profile icon' />
                             <div>
                                 <button onClick={handleLogout}>
-                                    <img src={assets.logout_icon} alt='Logout icon' />
                                     LogOut
                                 </button>
                                 <button>
-                                    <img src={assets.order_icon} alt='Order icon' />
-                                    Order
+                                    Go to Orders
                                 </button>
                             </div>
                         </div>

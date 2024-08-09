@@ -1,22 +1,23 @@
 /* CartPlaceOrder.css */
 .cart-place-order {
     margin-inline: auto;
-    width: 80vw;
-    max-width: 500px;
+    width: 90vw;
+    box-sizing: border-box;
+    max-width: 450px;
     height: auto;
     justify-self: center;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
-    padding: 30px;
-    background-color: #fff5f5;
-    border: 1px solid #fb6b52;
+    padding: 0px;
+    background-color: #fee9e998;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 .promo-code-box {
-    width: 90%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +56,7 @@
 }
 
 .place-order-card {
-    width: 80vw;
+    width: 90%;
     margin: 20px;
     background-color: #fff;
     border: 1px solid #ff6347;
@@ -114,12 +115,10 @@
 /* Media Queries */
 @media (min-width: 600px) {
     .cart-place-order {
-        
-        width: 80vw;
-        max-width: 600px;
+        padding-inline: 5px;
+        max-width: 450px;
         flex-direction: row;
-
-        padding: 30px;
+        height: fit-content;
     }
 
     .promo-code-text {

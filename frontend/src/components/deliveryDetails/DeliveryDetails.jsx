@@ -33,15 +33,15 @@ const DeliveryDetails = () => {
             <h2>Delivery Information</h2>
             <form onSubmit={handleSubmit}>
                 <div className='multi-fields'>
-                <label>
-                    First name:
-                    <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                    />
-                </label>
+                    <label>
+                        First name:
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                        />
+                    </label>
                     <label>
                         Last name:
                         <input
@@ -61,7 +61,7 @@ const DeliveryDetails = () => {
                     />
                 </label>
 
-                   <label>
+                    <label>
                         Phone:
                         <input
                             type="tel"
@@ -70,7 +70,7 @@ const DeliveryDetails = () => {
                             onChange={handleChange}
                         />
                     </label>
-</div>
+                </div>
                 <div className='multi-fields'> <label>
                     Street:
                     <input
@@ -80,15 +80,15 @@ const DeliveryDetails = () => {
                         onChange={handleChange}
                     />
                 </label><label>
-                    City:
-                    <input
-                        type="text"
-                        name="city"
-                        value={formData.city}
-                        onChange={handleChange}
-                    />
-                </label>
-                  </div>
+                        City:
+                        <input
+                            type="text"
+                            name="city"
+                            value={formData.city}
+                            onChange={handleChange}
+                        />
+                    </label>
+                </div>
                 <div className='multi-fields'>  <label>
                     State:
                     <input
@@ -98,14 +98,14 @@ const DeliveryDetails = () => {
                         onChange={handleChange}
                     />
                 </label> <label>
-                    Zip code:
-                    <input
-                        type="text"
-                        name="zipCode"
-                        value={formData.zipCode}
-                        onChange={handleChange}
-                    />
-                </label>
+                        Zip code:
+                        <input
+                            type="text"
+                            name="zipCode"
+                            value={formData.zipCode}
+                            onChange={handleChange}
+                        />
+                    </label>
                     <label>
                         Country:
                         <input

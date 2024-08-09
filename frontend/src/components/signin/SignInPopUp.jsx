@@ -1,4 +1,4 @@
-import { useState,useContext } from "react";
+import { useState, useContext } from "react";
 import './SignIn.css';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -13,7 +13,8 @@ const SignInPopUp = () => {
         password: ""
     });
     const [visible, setVisible] = useState(true);
-const{setToken,url}=useContext(StoreContext);
+    const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
+    const { setToken, url } = useContext(StoreContext);
 
     const onSignIn = (event) => {
         const name = event.target.name;
@@ -29,15 +30,14 @@ const{setToken,url}=useContext(StoreContext);
 
             if (response.data.success) {
                 setToken(response.data.token);
-                localStorage.setItem("token",response.data.token);
+                localStorage.setItem("token", response.data.token);
                 toast.success(alreadyUser ? "Logged In Successfully" : "Registered Successfully");
                 setVisible(false);
             } else {
                 if (response.data.message === "Email already in use") {
                     toast.error("User with this email already exists. Please login.");
-                }
-                else if (response.data.message === "Email is invalid") {
-                    toast.error("Invalid Error");
+                } else if (response.data.message === "Email is invalid") {
+                    toast.error("Invalid Email");
                 } else if (response.data.message === "Password length must be at least 8 characters") {
                     toast.error("Password length must be at least 8 characters");
                 } else {
@@ -45,13 +45,18 @@ const{setToken,url}=useContext(StoreContext);
                 }
             }
         } catch (error) {
-            toast.error(error);
+            toast.error(error.message);
         }
     };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(prev => !prev);
+    };
+
     if (!visible) return null;
+
     return (
         <div className="sign-in">
-
             <form className="sign-in-card" onSubmit={onSubmit}>
                 <button type="button" onClick={() => setVisible(false)} className="close-sign-in">X</button>
                 {alreadyUser ? (
@@ -65,14 +70,23 @@ const{setToken,url}=useContext(StoreContext);
                             className="e-mail"
                             placeholder="E-mail"
                         />
-                        <input
-                            onChange={onSignIn}
-                            name="password"
-                            value={data.password}
-                            type="password"
-                            className="password"
-                            placeholder="Password"
-                        />
+                        <div className="password-field">
+                            <input
+                                onChange={onSignIn}
+                                name="password"
+                                value={data.password}
+                                type={showPassword ? "text" : "password"} // Toggle between password and text
+                                className="password"
+                                placeholder="Password"
+                            />
+                            <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
+                                <img
+                                    src={showPassword ? "https://cdn-icons-png.flaticon.com/512/709/709612.png" : "https://cdn-icons-png.flaticon.com/512/709/709586.png"}
+                                    alt={showPassword ? "Hide Password" : "Show Password"}
+                                    width="20px"
+                                />
+                            </button>
+                        </div>
                         <div className="login-or-signup-change">
                             <p>Create a new account</p>
                             <button type="button" onClick={() => setAlreadyUser(false)}>Sign-up</button>
@@ -98,14 +112,25 @@ const{setToken,url}=useContext(StoreContext);
                             className="e-mail"
                             placeholder="E-mail"
                         />
-                        <input
-                            onChange={onSignIn}
-                            name="password"
-                            value={data.password}
-                            type="password"
-                            className="password"
-                            placeholder="Password"
-                        />
+                        <div className="password-field">
+                            <input
+                                onChange={onSignIn}
+                                name="password"
+                                value={data.password}
+                                type={showPassword ? "text" : "password"} // Toggle between password and text
+                                className="password"
+                                placeholder="Password"
+                            />
+                            <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
+                                <img
+                                    src={showPassword ? "https://cdn-icons-png.flaticon.com/512/709/709612.png" : "https://cdn-icons-png.flaticon.com/512/709/709586.png"}
+                                    alt={showPassword ? "Hide Password" : "Show Password"
+                                    }
+                                    className="eyes"
+                                    width="15px"
+                                />
+                            </button>
+                        </div>
                         <div className="terms-and-conditions">
                             <input type="checkbox" id="terms" />
                             <label htmlFor="terms">I agree to the terms and conditions</label>
@@ -123,4 +148,3 @@ const{setToken,url}=useContext(StoreContext);
 };
 
 export default SignInPopUp;
-
