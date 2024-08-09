@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-  const url = 'http://localhost:5001';
+  const url = 'https://tomato-backend-1yje.onrender.com';
   return (
     <><ToastContainer />
       <NavBar />

@@ -32,5 +32,5 @@ app.use("/api/cart",cartRouter);
 // Start server
 const PORT = process.env.PORT || 4000; // Default to port 4000 if PORT is not set
 app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}`);
+    console.log(`Server started on https://tomato-backend-1yje.onrender.com`);
 });

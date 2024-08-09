@@ -6,7 +6,7 @@ export const StoreContextProvider = (props) => {
     const [token, setToken] = useState("");
     const [cartItem, setCartItem] = useState({});
     const [food_list, setFoodList] = useState([]);
-    const url = "http://localhost:5001";
+    const url = "https://tomato-backend-1yje.onrender.com";
 
     const [category, setCategory] = useState("All");
     const addToCart = async (itemId) => {
