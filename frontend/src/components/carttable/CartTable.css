@@ -21,7 +21,27 @@
 }
 .cart-items .food-card {
   height: fit-content;
+}.cart-items .totals {
+    background-color: rgba(234, 149, 149, 0.8); /* Slightly increased opacity for better visibility */
+    color: black;
+    position: relative; /* Positioned within its container */
+    width: 200px; /* Width to fit content comfortably */
+    padding: 15px;
+    margin-inline: 100px; /* Ample padding for spacing */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 10px; /* Margin to separate from other content */
+    box-sizing: border-box; /* Includes padding and border in element’s total width and height */
+    font-size: 16px; /* Slightly larger font size for better readability */
+    font-weight: bold; /* Makes text bold */
+    text-align: center; /* Centers text within the div */
 }
+
+.cart-items .totals p {
+    margin: 10px 0; /* Spacing between paragraphs for readability */
+    line-height: 1.5; /* Increases line height for better readability */
+}
+
 
 @media (max-width: 900px) {
   .cart-table {
@@ -32,7 +52,7 @@
     padding: 0;
   }
   .cart-items .food-card {
-    width: 47%;
+    width: 100%;
     height: 30vh;
     margin-block: 5px;
   }
@@ -40,4 +60,10 @@
     left: 0;
     bottom: 0%;
   }
+}
+@media (max-width: 600px) {
+  .cart-table .cart-place-order .promo-code-box{
+    display: none;
+  }
+  
 }
