@@ -5,6 +5,7 @@ import connectDB from './config/db.js';
 import { userRouter } from './routes/userRouter.js';
 import dotenv from 'dotenv';
 import cartRouter from './routes/cartRouter.js';
+// import orderRouter from './routes/orderRouter.js';
 
 // Initialize Express app
 const app = express();
@@ -28,7 +29,8 @@ connectDB();
 app.use("/api/food", foodRouter);
 app.use("/images", express.static('upload'));
 app.use("/api/user", userRouter);
-app.use("/api/cart",cartRouter);
+app.use("/api/cart", cartRouter);
+// app.use("api/order", orderRouter);
 // Start server
 const PORT = process.env.PORT || 4000; // Default to port 4000 if PORT is not set
 app.listen(PORT, () => {
