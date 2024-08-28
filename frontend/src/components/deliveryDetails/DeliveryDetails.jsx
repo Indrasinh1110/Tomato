@@ -116,7 +116,7 @@ const DeliveryDetails = () => {
                         />
                     </label></div>
                 <div className='multi-fields'></div>
-                <button type="submit">Submit</button>
+                <button className='address-submit' type="submit">Submit</button>
             </form>
         </div>
     );
